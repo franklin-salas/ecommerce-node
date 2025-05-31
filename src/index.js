@@ -1,11 +1,17 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-
-// Cargar variables de entorno desde .env
-dotenv.config();
+const config = require('./config');
+const MongoProductRepository = require('./infraestructure/repositories/MongoProductRepository');
+const ProductController = require('./adapters/controllers/ProductController');
+const productRoutes = require('./adapters/routes/productRoutes');
+const { verifyToken } = require('./adapters/middlewares/authJwt');
 
 const app = express();
+const port = config.port;
+
+// Dependencies
+const productRepository = new MongoProductRepository();
+const productController = new ProductController(productRepository);
+
 // Middlewares
 app.use(express.json());
 
