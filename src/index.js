@@ -5,6 +5,7 @@ const MongoProductRepository = require('./infraestructure/repositories/MongoProd
 const MySQLProductRepository = require('./infraestructure/repositories/MySQLProductRepository');
 const MongoClientRepository = require('./infraestructure/repositories/MongoClientRepository');
 const MongoBranchRepository = require('./infraestructure/repositories/MongoBranchRepository');
+
 const ClientController = require('./adapters/controllers/ClientController');
 const BranchController = require('./adapters/controllers/BranchController');
 const ProductController = require('./adapters/controllers/ProductController');
