@@ -1,6 +1,6 @@
 class ProductDTO {
     constructor(product) {
-      this.id = product._id;
+      this.id = product.id;
       this.name = product.name;
       this.description = product.description;
       this.price = product.price;
