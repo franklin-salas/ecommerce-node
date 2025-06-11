@@ -1,4 +1,4 @@
-const CreateBranch = require('../../application/use_cases/CreateBranch');
+const CreateBranch = require('../../application/useCases/CreateBranch');
 const BranchDTO = require('../../application/dtos/BranchDTO');
 
 class BranchController {

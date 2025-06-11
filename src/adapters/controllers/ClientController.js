@@ -1,4 +1,4 @@
-const CreateClient = require('../../application/use_cases/CreateClient');
+const CreateClient = require('../../application/useCases/CreateClient');
 const ClientDTO = require('../../application/dtos/ClientDTO');
 
 class ClientController {

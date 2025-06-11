@@ -1,6 +1,6 @@
-📦 Estructura de Client y Branch
+## Estructura de Client y Branch
 El sistema implementa los módulos de Client (cliente) y Branch (sucursal) siguiendo la Arquitectura Limpia, dividiendo la lógica en capas bien definidas:
-
+```
 src/
 │
 ├── domain/
@@ -32,3 +32,4 @@ src/
 └── routes/
     ├── clientRoutes.js       # Rutas Express para cliente
     └── branchRoutes.js       # Rutas Express para sucursal
+```

@@ -1,5 +1,5 @@
 const BranchRepository = require('../../domain/repositories/BranchRepository');
-const BranchModel = require('../database/models/Branch');
+const BranchModel = require('../database/models/BranchModel');
 const Branch = require('../../domain/entities/Branch');
 
 class MongoBranchRepository extends BranchRepository {

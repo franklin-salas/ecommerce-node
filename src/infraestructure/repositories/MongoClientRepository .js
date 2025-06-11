@@ -1,5 +1,5 @@
 const ClientRepository = require('../../domain/repositories/ClientRepository');
-const ClientModel = require('../database/models/Client');
+const ClientModel = require('../database/models/ClientModel');
 const Client = require('../../domain/entities/Client');
 
 class MongoClientRepository extends ClientRepository {

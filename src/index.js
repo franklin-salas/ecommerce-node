@@ -2,9 +2,9 @@ const express = require('express');
 const config = require('./config');
 console.log('>>> Config leída:', config);
 const MongoProductRepository = require('./infraestructure/repositories/MongoProductRepository');
-const MySQLProductRepository = require('./infraestructure/repositories/MySQLProductRepository');
-const MongoClientRepository = require('./infraestructure/repositories/MongoClientRepository');
+const MongoClientRepository = require('./infraestructure/repositories/MongoClientRepository ');
 const MongoBranchRepository = require('./infraestructure/repositories/MongoBranchRepository');
+const MySQLProductRepository = require('./infraestructure/repositories/MySQLProductRepository');
 
 const ClientController = require('./adapters/controllers/ClientController');
 const BranchController = require('./adapters/controllers/BranchController');
@@ -17,7 +17,6 @@ const { verifyToken } = require('./adapters/middlewares/authJwt');
 const app = express();
 const port = config.port;
 
-// Dependencies
 // Dependencies
 const dbType = config.DB_TYPE || 'mongodb'; // 'mongo' o 'mysql'
 let productRepository;
