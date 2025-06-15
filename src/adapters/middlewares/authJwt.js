@@ -16,7 +16,14 @@ const verifyToken = (req, res, next) => {
 
   
   jwt.verify(token, config.jwtSecret, (err, decoded) => {
-    if (err) return res.status(401).json({ message: 'Unauthorized!' });
+    if (err) {
+      // Verificar si el error es por token expirado
+      if (err.name === 'TokenExpiredError') {
+        return res.status(401).json({ message: 'Token expirado' });
+      }
+      return res.status(403).json({ message: 'Token inválido' });
+    }
+    // Si el token es válido, extraer el userId y roles
     req.userId = decoded.id;
     req.userRoles = decoded.roles;
     next();
